@@ -9,18 +9,28 @@
   "author": "Brent Brinkley",
   "license": "ISC",
   "dependencies": {
-    "@types/chosen": "^1.6.32",
-    "@types/jquery": "^2.0.33",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-preset-latest": "^6.24.0",
     "browser-sync": "^2.17.5",
-    "chosen-npm": "^1.4.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-notify": "^2.2.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.2",
+    "gulp-postcss": "^6.3.0",
     "gulp-sourcemaps": "^2.1.1",
-    "gulp-typescript": "^3.0.2",
-    "typescript": "^2.0.3"
+    "gulp-stylelint": "^3.9.0",
+    "precss": "^1.4.0",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "color-hex-case": "uppercase",
+      "font-family-name-quotes": "always-where-recommended"
+
+    }
   }
 }

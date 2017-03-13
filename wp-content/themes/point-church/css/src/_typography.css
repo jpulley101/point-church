@@ -1,0 +1,65 @@
+
+.blog{
+    h1{
+        font-size: 3em;
+    }
+
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2{
+        font-size: 1.6em;
+        margin-top: .25em;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+    }
+
+    a{
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .meta{
+        margin-top: -1em;
+        color: #666;
+        font-weight: 100;
+        font-size: 1em;
+    }
+    
+
+}
+
+p{
+	line-height: 1.6em;
+	font-size: 1.2em;
+	margin-bottom: 1.6em;
+}
+
+small{
+	font-size: .8em;
+	line-height: 1.4em;
+	margin: 0 1em 0 0;
+	color: #666;
+	font-weight: 100;
+}
+
+a{ color: $point-blue; &:hover{ color: lighten($point-blue, 5%); }}
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+h5{
+	font-weight: 800;
+	font-size: 1.4em;
+	margin: 3em 0 1em;
+}
