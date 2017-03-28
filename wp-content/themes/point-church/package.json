@@ -1,12 +1,12 @@
 {
-  "name": "wordpressframe",
+  "name": "point-church",
   "version": "1.0.0",
-  "description": "A Wordpress Starter framework",
+  "description": "The Point Church website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brent Brinkley",
+  "author": "Josh Mobley",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.1.1"
@@ -28,9 +28,8 @@
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
-      "color-hex-case": "uppercase",
+      "color-hex-case": "lower",
       "font-family-name-quotes": "always-where-recommended"
-
     }
   }
 }
