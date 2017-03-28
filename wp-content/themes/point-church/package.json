@@ -1,12 +1,12 @@
 {
-  "name": "wordpressframe",
+  "name": "point-church",
   "version": "1.0.0",
-  "description": "A Wordpress Starter framework",
+  "description": "The Point Church Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brent Brinkley",
+  "author": "Josh Mobley",
   "license": "ISC",
   "dependencies": {
     "@types/chosen": "^1.6.32",
