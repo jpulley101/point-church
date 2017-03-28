@@ -7,7 +7,7 @@
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync').create();
 var sass         = require('gulp-sass');
-//var ts           = require('gulp-typescript');
+var babel        = require('gulp-babel');
 var sourcemaps   = require('gulp-sourcemaps');
 var plumber      = require('gulp-plumber');
 var notify       = require('gulp-notify');
@@ -77,16 +77,16 @@ var autoprefixer = require('gulp-autoprefixer');
 
     /*
     |----------------------------------------------
-    | TypeScript
+    | JavaScript - Babel
     |----------------------------------------------
     */
 
-  /*  gulp.task("ts", function() {
+    gulp.task("js", function() {
 
         return gulp
         
             // input files
-            .src('./js/ts/*.ts')
+            .src('./js/src/**/*.js')
 
             // handles errors through notify
             .on('error', notify.onError(function (error) {
@@ -100,28 +100,23 @@ var autoprefixer = require('gulp-autoprefixer');
             .pipe(sourcemaps.init())
 
             // TypeScript object
-            .pipe(ts({
-
-                // throws error on implicit any if enabled
-                noImplicitAny: true,
-
-                // name of output file
-                outFile: 'main.js',
-                module: 'amd',
-                pretty: true
-
-
+            .pipe(babel({
+			    presets: ['es2015'],
+                plugins: [
+                    'transform-es2015-modules-amd',
+                    'transform-class-properties'
+                    ]
             }))
 
             // output sourcemap
-            .pipe(sourcemaps.write('../js'))
+            .pipe(sourcemaps.write('../js/maps/'))
 
             // output files 
-            .pipe(gulp.dest('./scripts/js/'))
+            .pipe(gulp.dest('./js/'))
 
             // conntection to browser-sync
             .pipe(browserSync.stream());
-    });*/
+    });
 
     /*
     |----------------------------------------------
@@ -148,6 +143,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('watch', function() {
     gulp.watch('./sass/**/*.scss', ['sass']);
+    gulp.watch('./js/src/**/*.js', ['js']);
     gulp.watch(['./**/*.php'], ['php']);
 });
 
@@ -157,4 +153,4 @@ gulp.task('watch', function() {
 |--------------------------------------------------------------------------
 */
 
-gulp.task('default', ['sass', 'php', 'browser-sync','watch']);
+gulp.task('default', ['sass', 'js', 'php', 'browser-sync','watch']);

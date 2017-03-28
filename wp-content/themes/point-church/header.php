@@ -11,6 +11,21 @@
 	<!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5-shiv.min.js"></script>
 	<![endif]-->
+
+	<script data-main="<?php bloginfo('stylesheet_directory'); ?>/js/main.js?a" src="<?php bloginfo('stylesheet_directory'); ?>/js/require.js"></script>
+
+	<!-- GA TRACKING -->
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  
+  		ga('create', 'UA-66191935-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
+	<!-- end GA -->
+
 </head>
 <?php if(is_front_page()){ $type = 'home'; }elseif( is_404() ){ $type = 'page-not-found'; }elseif( is_page('mission-vision-values') || is_page('beliefs-baptism') || is_page('staff')){ $type = 'styled-page'; }elseif( $post->post_parent == '4'){ $type = 'locations'; }else{ $type = get_post_type(); } ?>
 
@@ -24,18 +39,7 @@
 ?>
 
 <body class="<?php echo $type . ' ' . $alertClass; ?>">
-	<!-- GA TRACKING -->
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-66191935-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<!-- end GA -->
+	
 
 	<div class="off-canvas-click-blocker"></div><?php // to prevent accidental clicking when menu is open ?>
 
