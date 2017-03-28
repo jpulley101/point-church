@@ -1,0 +1,7 @@
+.section {
+  padding: 2em;
+
+  + .section {
+    border-top: 1px solid #ccc;
+  }
+}

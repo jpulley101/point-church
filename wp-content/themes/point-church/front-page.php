@@ -23,7 +23,7 @@
 	</div>
 </section>
 
-<section id="home-welcome">
+<section id="home-welcome" class="section">
 	<div class="wrapper">
 		<h3 class="section-head">Welcome</h3>
 		<p>The Point Church is a movement of churches across the Triangle with one mission. We are all about pointing people to Jesus.  We want to help people take their next steps with him—no matter where they are in their faith. So there’s no need to dress up, pretend to be perfect, or worry about your past. We just want you to experience Jesus.</p>
@@ -34,7 +34,7 @@
 	</div>
 </section>
 
-<section id="home-worship" class="photo">
+<section id="home-worship" class="photo section">
 	<div class="image-filter"></div>
 	<div class="wrapper">
 		<h3 class="section-head">Worship</h3>
@@ -47,7 +47,7 @@
 	</div>
 </section>
 
-<section id="home-kids">
+<section id="home-kids" class="section">
 	<div class="wrapper">
 		<div class="text-wrapper">
 			<h3 class="section-head">Kids</h3>
@@ -68,7 +68,7 @@
 	</div>
 </section>
 
-<section id="home-sermons" class="photo">
+<section id="home-sermons" class="photo section">
 	<div class="image-filter"></div>
 	<div class="wrapper">
 		<h3 class="section-head">Teaching</h3>
@@ -81,7 +81,7 @@
 	</div>
 </section>
 
-<section id="home-locations">
+<section id="home-locations" class="section">
 	<div class="wrapper">
 		<h3 class="section-head">Explore a Campus</h3>
 		<h4 class="section-head-desc">A Movement in Many Locations.</h4>

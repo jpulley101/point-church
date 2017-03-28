@@ -24,12 +24,5 @@
     "gulp-stylelint": "^3.9.0",
     "precss": "^1.4.0",
     "stylelint-config-standard": "^16.0.0"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "color-hex-case": "lower",
-      "font-family-name-quotes": "always-where-recommended"
-    }
   }
 }

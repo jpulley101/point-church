@@ -1,8 +1,11 @@
 /* variables & settings */
+
 @import 'reset';
 @import 'variables';
 @import 'typography';
 
 /* components */
+
 @import 'components/header';
 @import 'components/footer';
+@import 'components/section';

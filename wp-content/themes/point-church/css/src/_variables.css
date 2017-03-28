@@ -1,46 +1,44 @@
-$darkGray: #333333;
+$darkGray: #333;
 $pointBlue: #00a0c6;
 
-
-
 @define-mixin breakpoint400 {
-    @media screen and (min-width: 400px){
-        @mixin-content;
-    }
+  @media screen and (min-width: 400px) {
+    @mixin-content;
+  }
 }
 
 @define-mixin breakpoint600 {
-    @media screen and (min-width: 600px){
-        @mixin-content;
-    }
+  @media screen and (min-width: 600px) {
+    @mixin-content;
+  }
 }
 
 @define-mixin breakpoint728 {
-    @media screen and (min-width: 728px){
-        @mixin-content;
-    }
+  @media screen and (min-width: 728px) {
+    @mixin-content;
+  }
 }
 
 @define-mixin breakpoint900 {
-    @media screen and (min-width: 900px){
-        @mixin-content;
-    }
+  @media screen and (min-width: 900px) {
+    @mixin-content;
+  }
 }
 
 @define-mixin breakpoint1024 {
-    @media screen and (min-width: 1024px){
-        @mixin-content;
-    }
+  @media screen and (min-width: 1024px) {
+    @mixin-content;
+  }
 }
 
 @define-mixin breakpoint1200 {
-    @media screen and (min-width: 1200px){
-        @mixin-content;
-    }
+  @media screen and (min-width: 1200px) {
+    @mixin-content;
+  }
 }
 
 @define-mixin breakpoint1600 {
-    @media screen and (min-width: 1600px){
-        @mixin-content;
-    }
+  @media screen and (min-width: 1600px) {
+    @mixin-content;
+  }
 }
