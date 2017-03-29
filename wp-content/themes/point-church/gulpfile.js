@@ -9,9 +9,9 @@
 // MODULES
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync').create();
+var eslint       = require('gulp-eslint');
 var postcss      = require('gulp-postcss');
 var stylelint    = require('gulp-stylelint');
-var stylelintLib = require('stylelint-config-standard');
 var sourcemaps   = require('gulp-sourcemaps');
 var babel        = require('gulp-babel');
 var plumber      = require('gulp-plumber');
@@ -78,32 +78,46 @@ gulp.task('css', function() {
 // JAVASCRIPT 
 gulp.task("js", function() {
 
-    // configure babel
-    var babelConfig = babel({
-        presets: ['latest'],                    // use the latest yearly ES version
-        compact: "true"                         // minify output
+        return gulp
+        
+            // input files
+            .src('./js/src/**/*.js')
+
+            .pipe( eslint() )
+            .pipe( eslint.format() )
+
+            // handles errors through notify
+            .on('error', notify.onError(function (error) {
+                return "Message to the notifier: " + error.message;
+            }))
+
+            // prevents errors from stopping gulp
+            .pipe(plumber())
+
+            // create sourcemap
+            .pipe(sourcemaps.init())
+
+            // TypeScript object
+            .pipe(babel({
+			    presets: ['es2015'],
+                plugins: [
+                    'transform-es2015-modules-amd',
+                    'transform-class-properties'
+                    ]
+            }))
+
+            // output sourcemap
+            .pipe(sourcemaps.write('../js/maps/'))
+
+            // output files 
+            .pipe(gulp.dest('./js/'))
+
+            // conntection to browser-sync
+            .pipe(browserSync.stream());
     });
-
-    // configure error message via notify
-    var errorHandler = notify.onError( function(error) {
-        return "JavaScript error: " + error.message;
-    });
-
-    return gulp
-        .src( scripts.path + '**/*.js' )        // input files
-        .pipe( babelConfig )                    // transpile via babel
-        .on( 'error', errorHandler )            // report error via notify
-        .pipe( plumber() )                      // continue gulp build on error
-        .pipe( sourcemaps.init() )              // create sourcemaps
-        .pipe( sourcemaps.write() )             // write sourcemaps to disk
-        .pipe( gulp.dest( scripts.dist ))       // write js to disk
-        .pipe( browserSync.stream() );          // stream change into browser
-
-});
 
 // PHP
 gulp.task( 'php', function() {
-
     return gulp
         .src( '**/*.php' )
         .pipe( browserSync.stream() );
@@ -119,5 +133,4 @@ gulp.task( 'watch', function() {
 
 });
 
-// DEFAULT
-gulp.task( 'default', ['css', 'js', 'browser-sync', 'watch'] ); // default task to run
+gulp.task('default', ['css', 'js', 'php', 'browser-sync','watch']);

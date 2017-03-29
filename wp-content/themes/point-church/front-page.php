@@ -10,20 +10,27 @@
 			</dl>
 		</h2>
 	</div>
-</section> */?>
-
+</section> 
 <section id="home-kcco" class="photo promo section" data-photo="<?php bloginfo('stylesheet_directory');?>/images/kcco-bg.jpg">
 	<div class="image-filter"></div>
 	<div class="wrapper">
 		<h3 class="section__header" id="kcco-text">Keep Calm and Carry On</h3>
 		<p>Have you ever wondered how to keep calm &amp; carry on in the midst of life's terrible circumstances? Join us this Sunday to hear people share their personal keep calm and carry on stories. We will also be giving away FREE Keep Calm and Carry On shirts to all of our guests during this series.  Click below to find a location near you.</p>
+  </div>
+</section>*/?>
+
+<section id="home-npp" class="photo promo section" data-image="<?php bloginfo('stylesheet_directory');?>/images/npp-bg.jpg">
+	<div class="image-filter"></div>
+	<div class="wrapper">
+		<h3 class="section__header" id="npp-text">No Perfect People</h3>
+		<p>For the first time ever we are uninviting people to church.  Perfect people are not welcome at the Point Church for the next 4 weeks, as we search the scriptures for how we follow Jesus as flawed and imperfect people.  If you are still waiting on your dream house, perfect spouse, and convertible... join us this Sunday!</p>
 		<div class="buttons">
 			<a href="#home-locations" class="button">Find a campus</a>
 		</div>
 	</div>
 </section>
 
-<section id="home-welcome" class="section" data-image="/wp-content/themes/point-church/images/worship-bg-600.jpg">
+<section id="home-welcome" class="section">
 	<div class="wrapper">
 		<h3 class="section__header">Welcome</h3>
 		<p>The Point Church is a movement of churches across the Triangle with one mission. We are all about pointing people to Jesus.  We want to help people take their next steps with him—no matter where they are in their faith. So there’s no need to dress up, pretend to be perfect, or worry about your past. We just want you to experience Jesus.</p>
@@ -34,7 +41,7 @@
 	</div>
 </section>
 
-<section id="home-worship" class="photo section">
+<section id="home-worship" class="photo section" data-image="/wp-content/themes/point-church/images/worship-bg-600.jpg">
 	<div class="image-filter"></div>
 	<div class="wrapper">
 		<h3 class="section__header">Worship</h3>

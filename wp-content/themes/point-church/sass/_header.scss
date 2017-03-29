@@ -27,17 +27,17 @@
 a.promo-bar:hover{
 	color: #000;
 	background: lighten(#f00000, 5%);
-
 }
 
 header{
 	position: fixed;
 	top: 0;
-	border-bottom: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid rgba(255,255,255,.2);
 	padding: 0 2em;
 	width: 100%;
 	z-index: 9999;
 	transition: all .5s;
+	background: rgba(0,0,0,.75);
 	@include clearfix;
 
 	h1{
@@ -55,14 +55,13 @@ header{
 		font-family: 'myriad-pro';
 		width: 75%;
 		margin-right: 2em;
-		//padding: 1em 4em 1em 0;
 
 		.menu-global-navigation-container{
 			float: right;
 		}
 
 		ul li{
-			font-size: 1.2em;
+			font-size: 1em;
 			display: inline;
 
 
@@ -84,7 +83,7 @@ header{
 			a{
 				color: #ccc;
 				text-decoration: none;
-				padding: 2.15em 2em;
+				padding: 2.15em 1em;
 				display: inline-block;
 
 				&:hover{
@@ -101,8 +100,7 @@ header{
 	}
 
 	&.past-intro, &.opaque{
-		background: rgba(0,0,0,.5);
-		//border-bottom: none;
+		background: rgba(0,0,0,.75);
 	}
 }
 
@@ -113,12 +111,13 @@ nav.off-canvas{ display: none; }
 	header{
 
 		h1{
-			width: 120px;
-			height: 52px;
+			width: 96px;
+			height: 42px;
 		}
 
 		nav.on-canvas{
-			width: 85%;
+			width: 80%;
+			margin-right: 4em;
 
 			ul li{
 
@@ -129,14 +128,11 @@ nav.off-canvas{ display: none; }
 				}
 
 				a{
-					padding: 1.7em 1.5em;
+					padding: 1.8em 1.5em;
 				}
 			}
 		}
-
 	}
-
-
 }
 
 @media screen and (max-width: 1024px){
@@ -146,7 +142,8 @@ nav.off-canvas{ display: none; }
 		padding: 1px 0;
 		position: static;
 
-		h1{ float: none; margin: 1em auto; }
+		h1{ float: none; margin: .5em auto; }
+
 		nav.on-canvas{
 			float: none;
 			margin: 0 auto;
@@ -171,7 +168,6 @@ nav.off-canvas{ display: none; }
 	}
 
 	header{
-
 		nav.on-canvas{
 			display: none;
 		}

@@ -1,0 +1,26 @@
+#news{
+
+    .section-head{
+        text-align: left;
+    }
+
+    .status{
+        font-weight: 100;
+    }
+
+    @media screen and (min-width: 1024px){
+
+        .news-feed{
+            width: 60%;
+            float: left;
+        }
+
+        .events-feed{
+            width: 35%;
+            float: right;
+        }
+        
+    }
+}
+
+
