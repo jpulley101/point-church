@@ -1,5 +1,4 @@
 <footer>
-	<div class="wrapper">
 
 		<h1 class="footer-title">The Point Church</h1>
 	
@@ -15,7 +14,6 @@
 			<p class="copyright">&copy;2015 The Point Church | <a href="<?php echo bloginfo('url'); ?>/wp-admin">Log In</a></p>
 			<a class="button float-right" href="https://pushpay.com/pay/pointchurch">Online Giving</a>
 
-	</div><!--.wrapper-->
 </footer>
 
 </body>

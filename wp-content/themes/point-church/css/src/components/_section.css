@@ -18,6 +18,12 @@
     font-weight: 400;
   }
 
+  img {
+    margin: 0 auto 2em;
+    display: block;
+    max-width: 100%;
+  }
+
   &.photo {
     position: relative;
     background-size: cover;
@@ -49,8 +55,9 @@
 }
 
 @media screen and (min-width: 800px) {
-
   .section {
+    padding: 8em 0;
+    text-align: center;
 
     .section__header {
       font-size: 3.4em;
@@ -60,7 +67,5 @@
       font-size: 2em;
       margin-top: -1em;
     }
-
   }
-
 }

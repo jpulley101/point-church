@@ -69,17 +69,9 @@
 	<header class="site-header">
 		<a href="<?php bloginfo('url'); ?>" class="logo"><?php bloginfo('name'); ?></a>
 
-		<nav class="on-canvas">
+		<nav class="site-nav">
 			<?php wp_nav_menu(array('menu' => 'global_nav' )); ?>
 		</nav>
+		<a href="#" class="site-nav__control">Menu</a>
 
 	</header>
-
-
-
-	<nav class="off-canvas">
-		<a href="#" class="off-canvas-control">Menu</a>
-		<ul><li><a href="<?php bloginfo('url'); ?>">Home</a></li></ul>
-		<?php wp_nav_menu(array('menu' => 'global_nav' )); ?>
-	</nav>
-

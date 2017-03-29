@@ -4,6 +4,7 @@
   left: 0;
   background: $darkGray;
   width: 100%;
+  z-index: 9998;
 
   .logo {
     text-indent: -9999em;
@@ -14,18 +15,15 @@
     margin: 1em auto;
     background-size: 100%;
   }
-
-  nav.on-canvas { display: none; }
 }
 
-nav.off-canvas {
+.site-nav {
   display: block;
   box-sizing: border-box;
   position: fixed;
-  top: -5px;
-  left: -75vw;
-  width: 75vw;
-  background: #333;
+  left: -100vw;
+  width: 100vw;
+  background: $pointBlue;
   height: 150%;
   padding: 1em;
   z-index: 9999;
@@ -34,24 +32,32 @@ nav.off-canvas {
   ul li a {
     padding: 1em 0;
     display: block;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px dotted #ddd;
     text-decoration: none;
-    text-align: center;
-  }
+    color: #ddd;
+    font-size: 1.4em;
+    transition: color .5s;
 
-  .off-canvas-control {
-    position: absolute;
-    right: -60px;
-    width: 50px;
-    height: 50px;
-    text-indent: -9999em;
-    display: block;
-    background: #333 url('../../images/hamburger.png') no-repeat center;
+    &:hover {
+      color: #fff;
+    }
   }
 
   &.open {
     left: 0;
   }
+}
+
+.site-nav__control {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999em;
+  display: block;
+  background: #333 url('../../images/hamburger.png') no-repeat center;
+  z-index: 9999;
 }
 
 @media screen and (min-width: 900px) {

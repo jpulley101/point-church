@@ -4,10 +4,15 @@ export class Menu {
 
   constructor () {
 
-    const button = ".off-canvas-control, .off-canvas-click-blocker";
-    const selector = ".off-canvas";
+    const button = ".site-nav__control, .off-canvas-click-blocker";
+    const selector = ".site-nav";
 
-    $(button).on("click", () => Menu.toggleMenu(selector));
+    $(button).on("click", (event) => {
+
+      event.preventDefault();
+      Menu.toggleMenu(selector);
+    
+    });
 
   }
 

@@ -42,11 +42,13 @@ define(["exports", "jquery"], function (exports, _jquery) {
     function Menu() {
       _classCallCheck(this, Menu);
 
-      var button = ".off-canvas-control, .off-canvas-click-blocker";
-      var selector = ".off-canvas";
+      var button = ".site-nav__control, .off-canvas-click-blocker";
+      var selector = ".site-nav";
 
-      (0, _jquery2.default)(button).on("click", function () {
-        return Menu.toggleMenu(selector);
+      (0, _jquery2.default)(button).on("click", function (event) {
+
+        event.preventDefault();
+        Menu.toggleMenu(selector);
       });
     }
 
