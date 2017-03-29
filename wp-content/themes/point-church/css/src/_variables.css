@@ -11,10 +11,6 @@ $pointBlue: #00a0c6;
   }
 }
 
-@define-mixin test {
-  background: red;
-}
-
 @define-mixin breakpoint400 {
   @media screen and (min-width: 400px) {
     @mixin-content;

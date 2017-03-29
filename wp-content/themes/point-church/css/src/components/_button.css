@@ -13,10 +13,17 @@
   clear: both;
   font-size: 1.2em;
   transition: all .5s;
+  box-sizing: border-box;
 
   &--white {
     border-color: #fff;
     color: #fff;
+    @extend .button;
+  }
+
+  &--gray {
+    border-color: #999;
+    color: #999;
     @extend .button;
   }
 }
