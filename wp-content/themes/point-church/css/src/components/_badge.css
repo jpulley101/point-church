@@ -1,0 +1,52 @@
+.badges {
+  width: 100%;
+  margin: 4em 0;
+}
+
+.badge {
+  text-align: center;
+  width: 49%;
+  display: inline-block;
+  margin-bottom: 2em;
+  color: #111;
+
+  img {
+    border-radius: 50%;
+    max-width: 125px;
+    margin-bottom: .5em;
+    opacity: .75;
+    transition: opacity .5s;
+  }
+
+  dt {
+    font-size: 1.6em;
+  }
+
+  dd {
+    margin-top: .5em;
+  }
+
+  &:hover {
+
+    img {
+      opacity: 1;
+    }
+
+  }
+}
+
+@media screen and (min-width: 500px) {
+
+  .badge {
+    width: 32%;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+
+  .badge {
+    width: 24%;
+  }
+
+}

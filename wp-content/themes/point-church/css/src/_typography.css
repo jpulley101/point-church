@@ -51,6 +51,7 @@ small {
 
 a {
   color: $point-blue;
+  text-decoration: none;
 
   &:hover {
     color: lighten($point-blue, 5%);

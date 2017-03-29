@@ -20,12 +20,11 @@
 </section>*/?>
 
 <section id="home-npp" class="photo promo section" data-image="<?php bloginfo('stylesheet_directory');?>/images/npp-bg.jpg">
-	<div class="image-filter"></div>
 	<div class="wrapper">
 		<h3 class="section__header" id="npp-text">No Perfect People</h3>
 		<p>For the first time ever we are uninviting people to church.  Perfect people are not welcome at the Point Church for the next 4 weeks, as we search the scriptures for how we follow Jesus as flawed and imperfect people.  If you are still waiting on your dream house, perfect spouse, and convertible... join us this Sunday!</p>
 		<div class="buttons">
-			<a href="#home-locations" class="button">Find a campus</a>
+			<a href="#home-locations" class="button--white">Find a campus</a>
 		</div>
 	</div>
 </section>
@@ -42,7 +41,6 @@
 </section>
 
 <section id="home-worship" class="photo section" data-image="/wp-content/themes/point-church/images/worship-bg-600.jpg">
-	<div class="image-filter"></div>
 	<div class="wrapper">
 		<h3 class="section__header">Worship</h3>
 		<h4 class="section__header-desc">Dynamic. Passionate. Diverse.</h4>
@@ -76,7 +74,6 @@
 </section>
 
 <section id="home-sermons" class="photo section">
-	<div class="image-filter"></div>
 	<div class="wrapper">
 		<h3 class="section__header">Teaching</h3>
 		<h4 class="section__header-desc">Compelling. Practical. Biblical.</h4>
@@ -93,63 +90,57 @@
 		<h3 class="section__header">Explore a Campus</h3>
 		<h4 class="section__header-desc">A Movement in Many Locations.</h4>
 		<p>Experience the the intimacy of a local church combined with power of collaboration resulting in a movement across the Triangle. At each of our campuses you will receive live in person teaching and engaging worship.</p>
-		<ul class="locations">
 
+    <div class="badges">
 			<a href="<?php bloginfo('url'); ?>/locations/apex">
-				<li class="apex">
-					<dl>
+					<dl class="badge">
+            <img src="http://placehold.it/300x300" />
 						<dt>Apex</dt>
 						<dd>9:15am &amp; 11am</dd>
 					</dl>
 				</li>
 			</a>
 			<a href="<?php bloginfo('url'); ?>/locations/cary">
-				<li class="cary">
-					<dl>
+					<dl class="badge">
+            <img src="http://placehold.it/300x300" />
 						<dt>Cary</dt>
 						<dd>9:15am &amp; 11am</dd>
 					</dl>
-				</li>
 			</a>
 			<a href="<?php bloginfo('url'); ?>/locations/chapel-hill">
-				<li class="chapel-hill">
-					<dl>
+					<dl class="badge">
+            <img src="http://placehold.it/300x300" />
 						<dt>Chapel Hill</dt>
 						<dd>10am</dd>
 					</dl>
-				</li>	
 			</a>
 			<a href="<?php bloginfo('url'); ?>/locations/espanol">
-				<li class="espanol">
-					<dl>
+					<dl class="badge">
+            <img src="http://placehold.it/300x300" />
 						<dt>Español</dt>
 						<dd>4pm</dd>
 					</dl>
-				</li>
 			</a>
 			<a href="<?php bloginfo('url'); ?>/locations/fuquay-varina">
-				<li class="fuquay">
-					<dl>
+					<dl class="badge">
+            <img src="http://placehold.it/300x300" />
 						<dt>Fuquay</dt>
 						<dd>August 2017</dd>
 					</dl>
-				</li>
 			</a>
 			<a href="<?php bloginfo('url'); ?>/locations/north-raleigh">
-				<li class="n-raleigh">
-					<dl>
+					<dl class="badge">
+            <img src="http://placehold.it/300x300" />
 						<dt>N. Raleigh</dt>
 						<dd>9:15am &amp; 11am</dd>
 					</dl>
-				</li>	
 			</a>
 			<a href="<?php bloginfo('url'); ?>/locations/south-raleigh">
-				<li class="s-raleigh">
-					<dl>
+					<dl class="badge">
+            <img src="http://placehold.it/300x300" />
 						<dt>S. Raleigh</dt>
 						<dd>9:15 &amp; 11am</dd>
 					</dl>
-				</li>	
 			</a>
 		</ul>
 
@@ -161,24 +152,22 @@
 
 <section id="map-canvas"></section>
 
-<section id="home-leadership" class="photo">
-	<div class="image-filter"></div>
+<section id="home-leadership" class="photo section">
 	<div class="wrapper">
 		<h3 class="section__header">Leadership</h3>
 		<p>The Point Church is not built around the personality of one person but operates with a team of leaders devoted to pointing people to Jesus.</p>
 		<div class="buttons">
-			<a href="<?php echo bloginfo('url'); ?>/about/staff/leadership-team" class="button">Meet Our Team</a>
+			<a href="<?php echo bloginfo('url'); ?>/about/staff/leadership-team" class="button--white">Meet Our Team</a>
 		</div>
 	</div>
 </section>
 
-<section id="home-whatif" class="photo">
-	<div class="image-filter"></div>
+<section id="home-whatif" class="photo section">
 	<div class="wrapper">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/whatif-logo.png" />
 		<p>What if we could go from 6 to 10 healthy campuses over the next 2 years?</p>
 		<div class="buttons">
-			<a href="<?php echo bloginfo('url'); ?>/whatif" class="button">Learn More</a>
+			<a href="<?php echo bloginfo('url'); ?>/whatif" class="button--white">Learn More</a>
 		</div>
 	</div>
 </section>

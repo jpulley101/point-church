@@ -13,4 +13,10 @@
   clear: both;
   font-size: 1.2em;
   transition: all .5s;
+
+  &--white {
+    border-color: #fff;
+    color: #fff;
+    @extend .button;
+  }
 }

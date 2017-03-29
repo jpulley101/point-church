@@ -83,7 +83,9 @@ gulp.task("js", function() {
             // input files
             .src('./js/src/**/*.js')
 
-            .pipe( eslint() )
+            .pipe( eslint({
+              fix: true
+            }))
             .pipe( eslint.format() )
 
             // handles errors through notify
