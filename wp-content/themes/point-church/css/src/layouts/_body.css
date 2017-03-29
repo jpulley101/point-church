@@ -1,0 +1,9 @@
+body {
+  margin-top: 77px;
+}
+
+@mixin breakpoint900 {
+  body {
+    margin-top: 0;
+  }
+}

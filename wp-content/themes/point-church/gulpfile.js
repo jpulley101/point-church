@@ -16,6 +16,7 @@ var sourcemaps   = require('gulp-sourcemaps');
 var babel        = require('gulp-babel');
 var plumber      = require('gulp-plumber');
 var notify       = require('gulp-notify');
+var cssnano      = require('cssnano');
 
 // PATHS
 var styles = {
@@ -40,27 +41,14 @@ gulp.task('browser-sync', function() {
     
 });
 
-gulp.task('stylelint', function() {
-
-  return gulp
-    .src( styles.path + '**/*.css' )
-    .pipe( stylelint({
-        failAfterError: false,
-        reporters: [
-            { formatter: 'string', console: true },
-            { formatter: 'verbose', console: true },
-        ],
-    }));
-
-}); 
-
 // CSS
 gulp.task('css', function() {
 
     // configure postcss + load modules
     var postcssConfig = postcss([
         require( 'precss' ),
-        require( 'autoprefixer' )
+        require( 'autoprefixer' ),
+        require( 'cssnano' )
     ]);
 
     // configure error message via notify
@@ -69,7 +57,14 @@ gulp.task('css', function() {
     });
 
     return gulp
-        .src( styles.path + styles.entry )      // file input
+        .src( styles.path + '**/*.css' )      // file input
+        .pipe( stylelint({
+          failAfterError: false,
+          reporters: [
+            { formatter: 'string', console: true },
+            { formatter: 'verbose', console: true },
+          ],
+        }))
         .pipe( sourcemaps.init() )              // create sourcemaps
         .pipe( postcssConfig )                  // configure postcss
         .on( 'error', errorHandler )            // report errors via notify
@@ -118,11 +113,11 @@ gulp.task( 'php', function() {
 // WATCH
 gulp.task( 'watch', function() {
 
-    gulp.watch( styles.path + '**/*.css', ['stylelint','css'] );    // watch css for changes
+    gulp.watch( styles.path + '**/*.css', ['css'] );    // watch css for changes
     gulp.watch( scripts.path + '**/*.js', ['js'] );     // watch js for changes
     gulp.watch( '**/*.php', ['php'] );
 
 });
 
 // DEFAULT
-gulp.task( 'default', ['stylelint', 'css', 'js', 'browser-sync', 'watch'] ); // default task to run
+gulp.task( 'default', ['css', 'js', 'browser-sync', 'watch'] ); // default task to run

@@ -1,0 +1,16 @@
+.buttons {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.button {
+  border: 1px solid #333;
+  color: #333;
+  text-decoration: none;
+  padding: .75em 2em;
+  margin: 1em;
+  display: inline-block;
+  clear: both;
+  font-size: 1.2em;
+  transition: all .5s;
+}

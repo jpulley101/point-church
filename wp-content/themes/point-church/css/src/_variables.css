@@ -1,6 +1,20 @@
 $darkGray: #333;
 $pointBlue: #00a0c6;
 
+@define-mixin clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    height: 0;
+    display: block;
+    visibility: hidden;
+  }
+}
+
+@define-mixin test {
+  background: red;
+}
+
 @define-mixin breakpoint400 {
   @media screen and (min-width: 400px) {
     @mixin-content;

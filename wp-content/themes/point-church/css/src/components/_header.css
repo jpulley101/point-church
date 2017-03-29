@@ -54,13 +54,19 @@ nav.off-canvas {
   }
 }
 
-@mixin breakpoint900 {
-  .header {
-    background: inherit;
+@media screen and (min-width: 900px) {
+  .site-header {
+    position: static;
+    padding: 0 2em;
+    @mixin clearfix;
   }
 
   .logo {
     float: left;
+  }
+
+  nav.off-canvas {
+    display: none;
   }
 }
 
