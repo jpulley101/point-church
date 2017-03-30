@@ -5,12 +5,12 @@
 	<div class="wrapper">
 		<h2>
 			<dl>
-				<dt>The Point Church</dt>
-				<dd>Pointing People to Jesus</dd>
+				<h5 class="badge__title">The Point Church</h4>
+				<p class="badge__desc">Pointing People to Jesus</p>
 			</dl>
 		</h2>
 	</div>
-</section> 
+</section>
 <section id="home-kcco" class="photo promo section" data-photo="<?php bloginfo('stylesheet_directory');?>/images/kcco-bg.jpg">
 	<div class="image-filter"></div>
 	<div class="wrapper">
@@ -19,7 +19,7 @@
   </div>
 </section>*/?>
 
-<section id="home-npp" class="photo promo section" data-image="<?php bloginfo('stylesheet_directory');?>/images/npp-bg.jpg">
+<section id="home-npp" class="photo full-bleed section" data-image="<?php bloginfo('stylesheet_directory');?>/images/npp-bg.jpg">
 	<div class="wrapper">
 		<h3 class="section__header" id="npp-text">No Perfect People</h3>
 		<p>For the first time ever we are uninviting people to church.  Perfect people are not welcome at the Point Church for the next 4 weeks, as we search the scriptures for how we follow Jesus as flawed and imperfect people.  If you are still waiting on your dream house, perfect spouse, and convertible... join us this Sunday!</p>
@@ -79,7 +79,7 @@
 		<h4 class="section__header-desc">Compelling. Practical. Biblical.</h4>
 		<p>Each message teaches the truths of the Bible in a compelling and meaningful way you can apply to your life.  You will experience live teaching at each of our campuses from dynamic local pastors. Click below to hear teaching from a campus close to you. </p>
 		<div class="buttons">
-			<a href="http://pointchurchsermons.com" class="button">Listen to a Message</a>
+			<a href="http://pointchurchsermons.com" class="button--white">Listen to a Message</a>
 			<!--Latest Message & Series Archive -->
 		</div>
 	</div>
@@ -92,62 +92,44 @@
 		<p>Experience the the intimacy of a local church combined with power of collaboration resulting in a movement across the Triangle. At each of our campuses you will receive live in person teaching and engaging worship.</p>
 
     <div class="badges">
-			<a href="<?php bloginfo('url'); ?>/locations/apex">
-					<dl class="badge">
-            <img src="http://placehold.it/300x300" />
-						<dt>Apex</dt>
-						<dd>9:15am &amp; 11am</dd>
-					</dl>
-				</li>
+			<a href="<?php bloginfo('url'); ?>/locations/apex" class="badge">
+        <img src="http://placehold.it/300x300" />
+				<h5 class="badge__title">Apex</h5>
+				<p class="badge__desc">9:15am &amp; 11am</p>
 			</a>
-			<a href="<?php bloginfo('url'); ?>/locations/cary">
-					<dl class="badge">
-            <img src="http://placehold.it/300x300" />
-						<dt>Cary</dt>
-						<dd>9:15am &amp; 11am</dd>
-					</dl>
+			<a href="<?php bloginfo('url'); ?>/locations/cary" class="badge">
+        <img src="http://placehold.it/300x300" />
+			  <h5 class="badge__title">Cary</h5>
+			  <p class="badge__desc">9:15am &amp; 11am</p>
 			</a>
-			<a href="<?php bloginfo('url'); ?>/locations/chapel-hill">
-					<dl class="badge">
-            <img src="http://placehold.it/300x300" />
-						<dt>Chapel Hill</dt>
-						<dd>10am</dd>
-					</dl>
+			<a href="<?php bloginfo('url'); ?>/locations/chapel-hill" class="badge">
+        <img src="http://placehold.it/300x300" />
+		    <h5 class="badge__title">Chapel Hill</h5>
+		    <p class="badge__desc">10am</p>
 			</a>
-			<a href="<?php bloginfo('url'); ?>/locations/espanol">
-					<dl class="badge">
-            <img src="http://placehold.it/300x300" />
-						<dt>Español</dt>
-						<dd>4pm</dd>
-					</dl>
+			<a href="<?php bloginfo('url'); ?>/locations/espanol" class="badge">
+        <img src="http://placehold.it/300x300" />
+			  <h5 class="badge__title">Español</h5>
+			  <p class="badge__desc">4pm</p>
 			</a>
-			<a href="<?php bloginfo('url'); ?>/locations/fuquay-varina">
-					<dl class="badge">
-            <img src="http://placehold.it/300x300" />
-						<dt>Fuquay</dt>
-						<dd>August 2017</dd>
-					</dl>
+			<a href="<?php bloginfo('url'); ?>/locations/fuquay-varina" class="badge">
+        <img src="http://placehold.it/300x300" />
+			  <h5 class="badge__title">Fuquay</h5>
+			  <p class="badge__desc">August 2017</p>
 			</a>
-			<a href="<?php bloginfo('url'); ?>/locations/north-raleigh">
-					<dl class="badge">
-            <img src="http://placehold.it/300x300" />
-						<dt>N. Raleigh</dt>
-						<dd>9:15am &amp; 11am</dd>
-					</dl>
+			<a href="<?php bloginfo('url'); ?>/locations/north-raleigh" class="badge">
+        <img src="http://placehold.it/300x300" />
+			  <h5 class="badge__title">N. Raleigh</h5>
+			  <p class="badge__desc">9:15am &amp; 11am</p>
 			</a>
-			<a href="<?php bloginfo('url'); ?>/locations/south-raleigh">
-					<dl class="badge">
-            <img src="http://placehold.it/300x300" />
-						<dt>S. Raleigh</dt>
-						<dd>9:15 &amp; 11am</dd>
-					</dl>
+			<a href="<?php bloginfo('url'); ?>/locations/south-raleigh" class="badge">
+        <img src="http://placehold.it/300x300" />
+			  <h5 class="badge__title">S. Raleigh</h5>
+			  <p class="badge__desc">9:15 &amp; 11am</p>
 			</a>
 		</ul>
-
-		<!--<div class="buttons">
-			<a href="#" class="button" id="map-expand">Find Campus Closest to Me</a>
-		</div>-->
 	</div>
+
 </section>
 
 <section id="map-canvas"></section>
@@ -171,8 +153,5 @@
 		</div>
 	</div>
 </section>
-
-
-
 
 <?php get_footer(); ?>

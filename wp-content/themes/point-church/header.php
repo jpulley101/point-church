@@ -7,11 +7,13 @@
 	<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/dist/main.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/images/fav-icon.png" />
-	<script data-main="wp-content/themes/point-church/js/main.js" src="<?php bloginfo('stylesheet_directory'); ?>/js/require.js"></script>
 	<!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5-shiv.min.js"></script>
 	<![endif]-->
-	<script data-main="<?php bloginfo('stylesheet_directory'); ?>/js/main.js?a" src="<?php bloginfo('stylesheet_directory'); ?>/js/require.js"></script>
+	<script
+    data-main="<?php bloginfo('stylesheet_directory'); ?>/js/main.js?a"
+    src="<?php bloginfo('stylesheet_directory'); ?>/js/require.js">
+  </script>
 
 	<!-- GA TRACKING -->
 	<script>
@@ -19,7 +21,7 @@
   		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  
+
   		ga('create', 'UA-66191935-1', 'auto');
   		ga('send', 'pageview');
 	</script>
@@ -30,7 +32,7 @@
 
 <?php
 	$alert = get_option( 'alert_bar_setting');
-	
+
 	if( $alert['checkbox'] == true ){
 		$alertClass = 'promo-active';
 	}
@@ -38,11 +40,11 @@
 ?>
 
 <body class="<?php echo $type . ' ' . $alertClass; ?>">
-	
+
 
 	<div class="off-canvas-click-blocker"></div><?php // to prevent accidental clicking when menu is open ?>
 
-	<?php 
+	<?php
 
 
 
@@ -54,7 +56,7 @@
 				echo '<div class="promo-bar">';
 			}
 
-			echo '<span>' . esc_html( $alert['text'] ) . '</span>'; 
+			echo '<span>' . esc_html( $alert['text'] ) . '</span>';
 
 			if( $alert['url'] != null ){
 				echo '</a>';

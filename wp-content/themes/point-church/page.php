@@ -2,24 +2,27 @@
 
 <?php if ( have_posts() ) : ?>
 
-<?php include('page-header.php'); ?>
-	
-	<?php	if(get_field('featured_video') != null){
+  <section class="section">
+    <div class="wrapper">
+	  <?php	if(get_field('featured_video') != null){
 			echo '<div class="featured-video"><iframe src="//player.vimeo.com/video/'.get_field('featured_video').'" width="650" height="370" frameborder="0"></iframe></div>';
 		} ?>
-		<section>
-	<div class="wrapper">
+    </div>
+	<section>
 
 <?php while ( have_posts() ) : the_post(); ?>
-
+  <section class="section dynamic-content">
+    <div class="wrapper">
 		<?php the_content(); ?>
-
+    </div>
+  </section>
 
 <?php endwhile; ?>
-	</div>
-</section>
+
 <?php else : ?>
+  <section class="section">
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  </section>
 <?php endif; ?>
 
 

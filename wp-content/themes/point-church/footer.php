@@ -2,11 +2,11 @@
 
 		<h1 class="footer__title">The Point Church</h1>
 
-		<div class="footer__address">
+		<p class="footer__address">
 			1503 Walnut St.<br/>
 			Cary, NC 27511<br/>
 			919-467-9159
-		</div><!--.footer-address-->
+		</p><!--.footer-address-->
 
 		<div class="buttons">
 

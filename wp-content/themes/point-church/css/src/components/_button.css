@@ -15,10 +15,21 @@
   transition: all .5s;
   box-sizing: border-box;
 
+  &:hover {
+    border-color: $pointBlue;
+    color: $pointBlue;
+  }
+
   &--white {
     border-color: #fff;
     color: #fff;
     @extend .button;
+
+    &:hover {
+      color: inherit;
+      border-color: inherit;
+      background: rgba(0, 0, 0, .2);
+    }
   }
 
   &--gray {

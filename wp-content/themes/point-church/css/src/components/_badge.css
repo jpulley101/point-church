@@ -1,34 +1,39 @@
 .badges {
   width: 100%;
-  margin: 4em 0;
+  margin: 4em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .badge {
-    text-align: center;
-    width: 49%;
-    display: inline-block;
+.badge {
+  text-align: center;
+  width: 49%;
+  display: inline-block;
+  color: #111;
+
+  img {
+    border-radius: 50%;
+    width: 125px;
+    margin-bottom: .5em;
+    opacity: .75;
+    transition: opacity .5s;
+  }
+
+  .badge__title {
+    font-size: 1.6em;
+  }
+
+  .badge__desc {
+    margin-top: .25em;
+  }
+
+  + .badge {
     margin-bottom: 2em;
-    color: #111;
+  }
 
+  &:hover {
     img {
-      border-radius: 50%;
-      width: 125px;
-      margin-bottom: .5em;
-      opacity: .75;
-      transition: opacity .5s;
-    }
-
-    dt {
-      font-size: 1.6em;
-    }
-
-    dd {
-      margin-top: .5em;
-    }
-
-    &:hover {
-      img {
-        opacity: 1;
-      }
+      opacity: 1;
     }
   }
 }
@@ -36,6 +41,10 @@
 @media screen and (min-width: 500px) {
   .badges .badge {
     width: 32%;
+
+    img {
+      margin-bottom: 1em;
+    }
   }
 }
 

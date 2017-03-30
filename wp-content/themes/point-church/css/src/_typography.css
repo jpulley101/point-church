@@ -2,9 +2,20 @@ h1, h2, h3, h4, h5, p, blockquote, li, dt, dd, span, a {
   font-family: 'myriad-pro';
 }
 
-.blog {
-  max-width: 800px;
-  margin: 0 auto;
+.dynamic-content {
+  text-align: left !important;
+
+  .alignleft {
+    float: left;
+    margin: 0 2em 2em 0;
+  }
+
+  .alignright {
+    float: right;
+    margin: 0 0 2em 2em;
+  }
+
+  h1, h2, h3, h4, h5 { clear: both; }
 
   h1 {
     font-size: 3em;
@@ -16,6 +27,20 @@ h1, h2, h3, h4, h5, p, blockquote, li, dt, dd, span, a {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+    border-bottom: 1px solid $pointBlue;
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 1.2em;
     margin-bottom: 1em;
   }
 
@@ -35,8 +60,16 @@ h1, h2, h3, h4, h5, p, blockquote, li, dt, dd, span, a {
   }
 }
 
+dl {
+  dt {
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-bottom: 1em;
+  }
+}
+
 p {
-  line-height: 1.6em;
+  line-height: 1.2em;
   font-size: 1.2em;
   margin-bottom: 1.6em;
 }
@@ -64,10 +97,4 @@ strong {
 
 em {
   font-style: italic;
-}
-
-h5 {
-  font-weight: 800;
-  font-size: 1.4em;
-  margin: 3em 0 1em;
 }
