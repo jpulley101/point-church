@@ -27,6 +27,7 @@
 
   &.full-bleed {
     height: 100vh;
+    padding: 25vh 2em;
   }
 
   &.photo {
@@ -79,7 +80,6 @@
 
     &.full-bleed {
       height: calc(100vh - 77px);
-      padding: 25vh 2em;
     }
   }
 }

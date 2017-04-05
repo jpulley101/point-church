@@ -67,3 +67,4 @@ wp-content/mysql.sql
 *.avi
 
 node_modules
+.vscode
