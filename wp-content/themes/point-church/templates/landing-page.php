@@ -12,9 +12,9 @@ get_header(); ?>
       <?php
       $query= new WP_Query();
       $pageQuery = $query->query(array('post_type' => 'page', 'posts_per_page' => '-1'));
-      $children = get_page_children( $post->ID, $pageQuery );
+      //$children = get_page_children( $post->ID, $pageQuery );
 
-      foreach( $children as $page ) :
+      foreach( $pageQuery as $page ) :
       ?>
 
       <a class="badge" href="<?php echo get_the_permalink( $page->ID ); ?>">

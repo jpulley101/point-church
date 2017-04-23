@@ -2,17 +2,20 @@
 
 <?php if ( have_posts() ) : ?>
 
-  <section class="section">
-    <div class="wrapper">
-	  <?php	if(get_field('featured_video') != null){
-			echo '<div class="featured-video"><iframe src="//player.vimeo.com/video/'.get_field('featured_video').'" width="650" height="370" frameborder="0"></iframe></div>';
-		} ?>
-    </div>
-	<section>
+  <div class="featured-image" style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);">
+  </div>
+
+	<?php if (get_field('featured_video') != null) : ?>
+    <section class="wrapper">
+	  		<div class="featured-video"><iframe src="//player.vimeo.com/video/<?php the_field('featured_video'); ?>" width="650" height="370" frameborder="0"></iframe></div>
+	  </section>
+  <?php endif; ?>
+
 
 <?php while ( have_posts() ) : the_post(); ?>
   <section class="section dynamic-content">
     <div class="wrapper">
+    <h1><?php the_title(); ?></h1>
 		<?php the_content(); ?>
     </div>
   </section>
