@@ -1,4 +1,4 @@
-define(["jquery", "components/badge", "campus-map", "header", "menu", "components/section"], function (_jquery, _badge2, _campusMap2, _header2, _menu2, _section2) {
+define(["jquery", "components/badge", "campus-map", "header", "menu", "components/section"], function (_jquery, _badge2, _campusMap2, _header2, _menu2, _section) {
   "use strict";
 
   var _jquery2 = _interopRequireDefault(_jquery);
@@ -14,7 +14,6 @@ define(["jquery", "components/badge", "campus-map", "header", "menu", "component
 
     var _header = new _header2.Header();
     var _menu = new _menu2.Menu();
-    var _section = new _section2.Section();
     var _badge = new _badge2.Badge();
 
     /*

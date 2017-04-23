@@ -10,7 +10,6 @@ $(document).ready(() => {
 
   const _header = new Header();
   const _menu = new Menu();
-  const _section = new Section();
   const _badge = new Badge();
 
   /*

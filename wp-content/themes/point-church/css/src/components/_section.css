@@ -1,6 +1,9 @@
 .section {
   padding: 4em 2em;
   box-sizing: border-box;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
 
   .section__header {
     text-align: center;
@@ -27,12 +30,14 @@
 
   &.full-bleed {
     height: 100vh;
-    padding: 25vh 2em;
+    padding: 2em;
   }
 
-  &.photo {
+  &.photo, &.promo {
     position: relative;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
 
     &::before {
